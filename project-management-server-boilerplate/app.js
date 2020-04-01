@@ -52,12 +52,6 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-
-app.use("/api", projectsRouter);
-app.use("/api", taskRouter);
-
 // ADD CORS SETTINGS HERE TO ALLOW CROSS-ORIGIN INTERACTION:
 
 app.use(
@@ -66,6 +60,12 @@ app.use(
     origin: ["http://localhost:3000"] // <== this will be the URL of our React app (it will be running on port 3000)
   })
 );
+
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+
+app.use("/api", projectsRouter);
+app.use("/api", taskRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
