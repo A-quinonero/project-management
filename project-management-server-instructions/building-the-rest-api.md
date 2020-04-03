@@ -13,7 +13,7 @@ Connected to Mongo! Database name: "project-management-server".
 
 ¡Así que comencemos! Estamos creando una aplicación de gestión de proyectos, así que definamos un esquema para nuestros proyectos.
 
-Agreguemos un archivo project-model.js en la carpeta models:
+Agreguemos un archivo project.js en la carpeta models:
 
 ```js
 // models/project.js
